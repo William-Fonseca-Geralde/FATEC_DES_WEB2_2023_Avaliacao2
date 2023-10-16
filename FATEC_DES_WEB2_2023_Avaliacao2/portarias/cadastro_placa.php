@@ -15,7 +15,8 @@
     }catch(PDOException $e){
         echo $sql . "<br>" . $e->getMessage();
     }
-    $stmt = $conn->query($sql);
+    $stmt = $conn->exec($sql);
+    $conn = null;
 ?>
  
 <!DOCTYPE html>
