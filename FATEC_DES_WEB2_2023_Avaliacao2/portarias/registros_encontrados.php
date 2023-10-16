@@ -40,9 +40,14 @@
             <label>Data e Hora em que existe registro de entrada/saída</label>
             <br>
             <?php
-                while ($row = $stmt->fetch()) {
-                    echo $row['data_hora'] . " / ";
+                if (!isset($row['data_hora'])) {
+                    echo "não há registro de hora";
+                } else {
+                    while ($row = $stmt->fetch()) {
+                        echo $row['data_hora'] . " / ";
+                    }
                 }
+                
                 $conn = NULL;
             ?>
         </div>
