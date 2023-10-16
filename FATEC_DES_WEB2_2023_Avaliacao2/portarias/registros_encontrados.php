@@ -41,7 +41,7 @@
             <br>
             <?php
                 while ($row = $stmt->fetch()) {
-                    echo $row['data_hora'] . "<br/>\n";
+                    echo $row['data_hora'] . " / ";
                 }
                 $conn = NULL;
             ?>
